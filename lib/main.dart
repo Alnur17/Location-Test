@@ -3,6 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:init_test/location.dart';
+import 'package:init_test/location_photo.dart';
 import 'package:init_test/notification.dart';
 
 void main() async {
@@ -55,6 +56,17 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('Go to Location Screen'),
+            ),
+            SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate to the notification screen when pressed
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LocationPhotoScreen()),
+                );
+              },
+              child: Text('picture on map'),
             ),
           ],
         ),
