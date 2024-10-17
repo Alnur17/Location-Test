@@ -15,7 +15,7 @@ class _LocationScreenState extends State<LocationScreen> {
   GoogleMapController? _mapController;
   Position? _currentPosition;
   static const String apiKey = "AIzaSyDAGsVp0FWyZdYBoB_TG54QyTZwPjet7-M";
-  LatLng _initialPosition = const LatLng(37.4219999, -122.0840575);
+  final LatLng _initialPosition = const LatLng(23.759244, 90.429302);
   Marker? _selectedMarker;
   List<Polyline> _routePolylines = [];
   String _durationText = '';
@@ -181,7 +181,7 @@ class _LocationScreenState extends State<LocationScreen> {
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('No places found')),
+        const SnackBar(content: Text('No places found')),
       );
     }
   }
