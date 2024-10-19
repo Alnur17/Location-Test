@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
@@ -14,7 +15,7 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   GoogleMapController? _mapController;
   Position? _currentPosition;
-  static const String apiKey = "your api key";
+  final String apiKey = dotenv.env['GOOGLE_MAP_APIKEY'] ?? '';
   final LatLng _initialPosition = const LatLng(23.759244, 90.429302);
   Marker? _selectedMarker;
   List<Polyline> _routePolylines = [];
