@@ -14,7 +14,7 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   GoogleMapController? _mapController;
   Position? _currentPosition;
-  static const String apiKey = "AIzaSyDAGsVp0FWyZdYBoB_TG54QyTZwPjet7-M";
+  static const String apiKey = "your api key";
   final LatLng _initialPosition = const LatLng(23.759244, 90.429302);
   Marker? _selectedMarker;
   List<Polyline> _routePolylines = [];

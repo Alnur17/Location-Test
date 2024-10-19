@@ -14,7 +14,7 @@ class LocationPhotoScreen extends StatefulWidget {
 
 class _LocationPhotoScreenState extends State<LocationPhotoScreen> {
   late GoogleMapController mapController;
-  static const String apiKey = 'AIzaSyDAGsVp0FWyZdYBoB_TG54QyTZwPjet7-M';
+  static const String apiKey = 'your api key';
   final LatLng _initialPosition = const LatLng(37.7749, -122.4194); // Default to San Francisco
 
   @override
