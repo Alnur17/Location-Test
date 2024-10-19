@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -14,7 +15,7 @@ class LocationPhotoScreen extends StatefulWidget {
 
 class _LocationPhotoScreenState extends State<LocationPhotoScreen> {
   late GoogleMapController mapController;
-  static const String apiKey = 'AIzaSyDAGsVp0FWyZdYBoB_TG54QyTZwPjet7-M';
+  final String apiKey = dotenv.env['GOOGLE_MAP_APIKEY'] ?? '';
   final LatLng _initialPosition = const LatLng(37.7749, -122.4194); // Default to San Francisco
 
   @override
