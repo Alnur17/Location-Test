@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: const Text('Home Screen'),
       ),
       body: Center(
         child: Column(
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => NotificationScreen()),
                 );
               },
-              child: Text('Go to Notification Screen'),
+              child: const Text('Go to Notification Screen'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -55,9 +55,9 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LocationScreen()),
                 );
               },
-              child: Text('Go to Location Screen'),
+              child: const Text('Go to Location Screen'),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 // Navigate to the notification screen when pressed
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LocationPhotoScreen()),
                 );
               },
-              child: Text('picture on map'),
+              child: const Text('picture on map'),
             ),
           ],
         ),

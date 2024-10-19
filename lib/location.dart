@@ -19,7 +19,7 @@ class _LocationScreenState extends State<LocationScreen> {
   Marker? _selectedMarker;
   List<Polyline> _routePolylines = [];
   String _durationText = '';
-  TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   List<dynamic> _searchSuggestions = [];
 
   @override
